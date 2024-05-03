@@ -20,6 +20,7 @@ public class BaseTests {
     @BeforeClass
     public void setUp() {
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         homePage = new HomePage(driver);
 
     }

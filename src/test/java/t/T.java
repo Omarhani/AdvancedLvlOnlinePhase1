@@ -1,12 +1,14 @@
 package t;
 
+import base.BaseTests;
 import data.DataModel;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import reader.ReadDataFromJson;
 
 import java.io.FileNotFoundException;
 
-public class T {
+public class T extends BaseTests {
 
     DataModel dataModel ;
 
@@ -32,5 +34,14 @@ public class T {
         dataModel = new ReadDataFromJson().readJsonFile();
         System.out.println(dataModel.Login.InvalidCredentials.InvalidPassword.Username);
         System.out.println(dataModel.Login.InvalidCredentials.InvalidPassword.Password);
+    }
+    @DataProvider
+    public Object[][] testDataForT5() throws FileNotFoundException {
+        return dataModel().Login1;
+    }
+    @Test(dataProvider = "testDataForT5")
+    public void t5(String username,String password){
+        System.out.println(username);
+        System.out.println(password);
     }
 }
