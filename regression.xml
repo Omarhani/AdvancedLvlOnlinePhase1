@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="regression test suite">
+    <test name="Chrome">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="login.LoginTests">
+                <methods>
+                    <exclude name="testLoginSuccessfully"/>
+                </methods>
+            </class>
+            <class name="login.LoginTests2"/>
+        </classes>
+    </test>
+    <test name="Edge">
+        <parameter name="browser" value="headlessfirefox"/>
+        <classes>
+            <class name="login.LoginTests">
+                <methods>
+                    <include name="t3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
