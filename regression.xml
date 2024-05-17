@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="regression test suite">
-    <test name="Chrome">
+<suite name="regression test suite" parallel="tests" thread-count="4">
+    <test name="Chrome" >
         <parameter name="browser" value="Chrome"/>
         <classes>
             <class name="login.LoginTests">
@@ -10,16 +10,43 @@
                 </methods>
             </class>
             <class name="login.LoginTests2"/>
+            <class name="login.LoginTests3"/>
         </classes>
     </test>
-    <test name="Edge">
-        <parameter name="browser" value="headlessfirefox"/>
-        <classes>
-            <class name="login.LoginTests">
-                <methods>
-                    <include name="t3"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Edge" parallel="classes" thread-count="2">-->
+<!--        <parameter name="browser" value="headlessedge"/>-->
+<!--        <classes>-->
+<!--            <class name="login.LoginTests">-->
+<!--                <methods>-->
+<!--                    <include name="t3"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="login.LoginTests3"/>-->
+
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="firefox" parallel="classes" thread-count="2">-->
+<!--        <parameter name="browser" value="headlessfirefox"/>-->
+<!--        <classes>-->
+<!--            <class name="login.LoginTests">-->
+<!--                <methods>-->
+<!--                    <include name="t3"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="login.LoginTests3"/>-->
+
+<!--        </classes>-->
+<!--    </test>-->
+<!--    test<test name="chrome" parallel="classes" thread-count="2">-->
+<!--        <parameter name="browser" value="headlesschrome"/>-->
+<!--        <classes>-->
+<!--            <class name="login.LoginTests">-->
+<!--                <methods>-->
+<!--                    <include name="t3"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="login.LoginTests3"/>-->
+
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
