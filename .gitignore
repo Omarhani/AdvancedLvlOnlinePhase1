@@ -38,5 +38,5 @@ build/
 .DS_Store
 
 
-*.9.png
-*.9.avi
+.png
+.avi

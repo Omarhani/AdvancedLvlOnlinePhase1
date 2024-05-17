@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.HomePage;
 import reader.ReadDataFromJson;
@@ -47,18 +48,13 @@ public class BaseTests {
             chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--headless");
             driver = new ChromeDriver(chromeOptions);
-        }
-
-        else if (browser.equalsIgnoreCase("edge")) {
+        } else if (browser.equalsIgnoreCase("edge")) {
             driver = new EdgeDriver();
         } else if (browser.equalsIgnoreCase("headlessEdge")) {
             edgeOptions = new EdgeOptions();
             edgeOptions.addArguments("--headless");
             driver = new EdgeDriver(edgeOptions);
-        }
-
-
-        else if (browser.equalsIgnoreCase("firefox")) {
+        } else if (browser.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("headlessfirefox")) {
             firefoxOptions = new FirefoxOptions();
@@ -75,19 +71,31 @@ public class BaseTests {
     }
 
     @AfterMethod
-    public void afterMethod(Method method) throws Exception {
+    public void afterMethod(Method method, ITestResult result) throws Exception {
         utilsTests = new UtilsTests(driver);
         utilsTests.takeScreenShot(method);
         ScreenRecorderUtil.stopRecord();
+        utilsTests.setStatus(method, result);
     }
 
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 
     protected DataModel dataModel() throws FileNotFoundException {
         return dataModel = new ReadDataFromJson().readJsonFile();
+    }
 
+    @BeforeSuite
+    public void beforeSuite() {
+        utilsTests = new UtilsTests(driver);
+        utilsTests.createReport();
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+        utilsTests = new UtilsTests(driver);
+        utilsTests.flushReport();
     }
 }
