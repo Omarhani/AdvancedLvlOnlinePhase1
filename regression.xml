@@ -4,13 +4,7 @@
     <test name="Chrome" >
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="login.LoginTests">
-                <methods>
-                    <exclude name="testLoginSuccessfully"/>
-                </methods>
-            </class>
-            <class name="login.LoginTests2"/>
-            <class name="login.LoginTests3"/>
+            <class name="login.LoginTests"/>
         </classes>
     </test>
 <!--    <test name="Edge" parallel="classes" thread-count="2">-->
