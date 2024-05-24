@@ -15,6 +15,8 @@ public class LoginPage extends MethodHandles {
 
     private final By loginButton = By.cssSelector(".button-1.login-button");
 
+    private final By emailValidationMessage = By.id("Email-error");
+
     private void insertEmail(String email){
         sendKeys(emailField,8,email);
     }
@@ -30,5 +32,9 @@ public class LoginPage extends MethodHandles {
         insertEmail(username);
         insertPassword(password);
         clickOnLoginButton();
+    }
+
+    public String  getEmailValidation(){
+        return getText(emailValidationMessage,5);
     }
 }
