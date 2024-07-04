@@ -7,40 +7,5 @@
             <class name="login.LoginTests"/>
         </classes>
     </test>
-<!--    <test name="Edge" parallel="classes" thread-count="2">-->
-<!--        <parameter name="browser" value="headlessedge"/>-->
-<!--        <classes>-->
-<!--            <class name="login.LoginTests">-->
-<!--                <methods>-->
-<!--                    <include name="t3"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="login.LoginTests3"/>-->
 
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="firefox" parallel="classes" thread-count="2">-->
-<!--        <parameter name="browser" value="headlessfirefox"/>-->
-<!--        <classes>-->
-<!--            <class name="login.LoginTests">-->
-<!--                <methods>-->
-<!--                    <include name="t3"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="login.LoginTests3"/>-->
-
-<!--        </classes>-->
-<!--    </test>-->
-<!--    test<test name="chrome" parallel="classes" thread-count="2">-->
-<!--        <parameter name="browser" value="headlesschrome"/>-->
-<!--        <classes>-->
-<!--            <class name="login.LoginTests">-->
-<!--                <methods>-->
-<!--                    <include name="t3"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--            <class name="login.LoginTests3"/>-->
-
-<!--        </classes>-->
-<!--    </test>-->
 </suite>
