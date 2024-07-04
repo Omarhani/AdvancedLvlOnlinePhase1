@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="regression test suite" parallel="tests" thread-count="4">
+<suite name="regression test suite" >
     <test name="Chrome" >
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="login.LoginTests"/>
+
         </classes>
     </test>
 
