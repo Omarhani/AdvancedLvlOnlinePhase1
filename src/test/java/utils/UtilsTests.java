@@ -35,7 +35,7 @@ public class UtilsTests {
 
     public void createReport() {
         extent = new ExtentReports();
-        ExtentSparkReporter spark = new ExtentSparkReporter("report/report.html");
+        ExtentSparkReporter spark = new ExtentSparkReporter("report/automationexercise.html");
         spark.config().setTheme(Theme.DARK);
         spark.config().setDocumentTitle("My Report");
         extent.attachReporter(spark);
