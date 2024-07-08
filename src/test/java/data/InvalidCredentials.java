@@ -2,6 +2,6 @@ package data;
 
 public class InvalidCredentials {
 
-    public InvalidUsername InvalidUsername;
+    public InvalidEmail InvalidEmail;
     public InvalidPassword InvalidPassword;
 }

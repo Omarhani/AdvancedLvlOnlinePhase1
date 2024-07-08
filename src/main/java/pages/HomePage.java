@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.MethodHandles;
 
@@ -22,5 +21,26 @@ public class HomePage extends MethodHandles {
         return new SignUpPage(driver);
     }
 
+    final static By loginLink = By.partialLinkText("Signup / Log");
+    final static By deleteAccountLink =By.xpath("//a[contains(text(),'Delete Account')]");
+    final static By loggedInAsUsernameText = By.xpath("//a[contains(text(),'Logged in as ')]");
 
+    public LoginPage clickOnLoginLink(){
+        click(loginLink,5);
+        return new LoginPage(driver);
+    }
+    public DeleteAccountPage clickOnDeleteAccountLink(){
+        click(deleteAccountLink , 5);
+        return new DeleteAccountPage(driver);
+    }
+
+    public boolean loggedInAsUsernameIsDisplayed(){
+        return isDisplayed(loggedInAsUsernameText,5);
+
+    }
+
+    public String homePageTitle() {
+        return driver.getTitle();
+
+    }
 }
