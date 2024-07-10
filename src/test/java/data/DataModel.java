@@ -2,9 +2,6 @@ package data;
 
 public class DataModel {
     public String URL;
-
-    public Login Login;
-
-    public Object[][] Login1;
+    public Register register;
     public String ValidationMessage;
 }

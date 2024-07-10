@@ -1,6 +1,6 @@
 package data;
 
-public class ValidCredentials {
+public class Register {
 
     public String name;
     public String email;

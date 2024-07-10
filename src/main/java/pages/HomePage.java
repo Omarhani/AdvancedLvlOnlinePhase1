@@ -18,7 +18,7 @@ public class HomePage extends MethodHandles {
     }
 
     public SignUpPage clickSignuplink() {
-        driver.findElement(Signuplink).click();
+        click(Signuplink,5);
         return new SignUpPage(driver);
     }
 

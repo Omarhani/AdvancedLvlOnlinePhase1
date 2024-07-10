@@ -2,10 +2,10 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.MethodHandles;
 
-public class SignUpPage {
+public class SignUpPage extends MethodHandles {
 
-    WebDriver driver;
     private final By NewUserSignupLabel = By.xpath("//h2[contains(text(),'New User Signup!')]");
     private final By nameField = By.xpath("//input[@name='name']");
     private final By emailField = By.xpath("//form[@action='/signup']//input[@name='email']");
@@ -14,7 +14,7 @@ public class SignUpPage {
     private final By ExistSignUpMessage = By.xpath("//form/p[contains(text(),'Email Address already exist!')]");
 
     public SignUpPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public String NewUserSignupValidation() {
@@ -22,15 +22,15 @@ public class SignUpPage {
     }
 
     public void enterName(String name) {
-        driver.findElement(nameField).sendKeys(name);
+        sendKeys(nameField,5,name);
     }
 
     public void enterEmail(String email) {
-        driver.findElement(emailField).sendKeys(email);
+        sendKeys(emailField,5,email);
     }
 
     public void clickSignupBtn() {
-        driver.findElement(SignupBtn).click();
+        click(SignupBtn,5);
     }
 
     public String ExistSignUpValidation() {
