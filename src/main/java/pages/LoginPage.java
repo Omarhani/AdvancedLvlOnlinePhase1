@@ -9,11 +9,11 @@ public class LoginPage extends MethodHandles {
         super(driver);
     }
 
-    final static By emailField = By.xpath("//*[contains(@data-qa , 'login-email')]");
-    final static By passwordField = By.name("password");
-    final static By loginButton = By.xpath("//button[contains(text(),'Login')]");
-    final static By loginToYourAccountText = By.xpath("//h2[contains(text(),'Login to your account')]");
-    final static By validationMSGText = By.xpath("//p[contains(text(),'Your email or password is incorrect!')]");
+    private final By emailField = By.xpath("//*[contains(@data-qa , 'login-email')]");
+    private final By passwordField = By.name("password");
+    private final By loginButton = By.xpath("//button[contains(text(),'Login')]");
+    private final By loginToYourAccountText = By.xpath("//h2[contains(text(),'Login to your account')]");
+    private final By validationMSGText = By.xpath("//p[contains(text(),'Your email or password is incorrect!')]");
 
 
     public boolean loginToYourAccountIsDisplayed(){

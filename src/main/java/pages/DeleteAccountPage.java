@@ -9,7 +9,7 @@ public class DeleteAccountPage extends MethodHandles {
         super(driver);
     }
 
-    final static By deleteAccountText = By.xpath("//b[contains(text(),'Account Deleted!')]");
+    private final By deleteAccountText = By.xpath("//b[contains(text(),'Account Deleted!')]");
 
     public boolean deleteAccountIsDisplayed(){
         return isDisplayed(deleteAccountText,5);

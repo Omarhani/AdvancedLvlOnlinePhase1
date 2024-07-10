@@ -10,9 +10,9 @@ public class HomePage extends MethodHandles {
         super(driver);
     }
 
-    final static By loginLink = By.partialLinkText("Signup / Log");
-    final static By deleteAccountLink =By.xpath("//a[contains(text(),'Delete Account')]");
-    final static By loggedInAsUsernameText = By.xpath("//a[contains(text(),'Logged in as ')]");
+    private final By loginLink = By.partialLinkText("Signup / Log");
+    private final By deleteAccountLink =By.xpath("//a[contains(text(),'Delete Account')]");
+    private final By loggedInAsUsernameText = By.xpath("//a[contains(text(),'Logged in as ')]");
 
     public LoginPage clickOnLoginLink(){
         click(loginLink,5);
