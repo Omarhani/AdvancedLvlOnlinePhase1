@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
 
 
 public class BaseTests {
-    WebDriver driver;
+   public WebDriver driver;
 
     ChromeOptions chromeOptions;
 
