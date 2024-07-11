@@ -68,7 +68,8 @@ public class MethodHandles {
                 setSteps();
                 webElement(locator).clear();
                 break;
-            }catch (StaleElementReferenceException e){
+            }catch
+            (StaleElementReferenceException e){
 
             }
         }
@@ -82,7 +83,8 @@ public class MethodHandles {
                 setSteps();
                 text= webElement(locator).getText();
                 break;
-            }catch (StaleElementReferenceException e){
+            }catch
+            (StaleElementReferenceException e){
 
             }
         }

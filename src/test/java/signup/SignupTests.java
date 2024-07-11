@@ -1,5 +1,7 @@
 package signup;
 
+import base.BaseTests;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
@@ -8,7 +10,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.SignupPage;
 
-public class SignupTests {
+public class SignupTests extends BaseTests {
 
 
     String email = "test150@gmail.com";
@@ -32,8 +34,7 @@ public class SignupTests {
 
     public void test_signup(){
 
-       HomePage homePage = new HomePage();
-
+        //HomePage homePage = new HomePage();
         LoginPage loginPage = homePage.loginlink();
 
         loginPage.insertname(name);

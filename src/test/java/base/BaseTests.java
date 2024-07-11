@@ -39,7 +39,8 @@ public class BaseTests {
     public void setUp(String browser) {
         setUpBrowser(browser);
         driver.manage().window().maximize();
-        homePage = new HomePage();
+        homePage = new HomePage(driver);
+
 
     }
 
