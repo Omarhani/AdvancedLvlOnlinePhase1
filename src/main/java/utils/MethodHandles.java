@@ -54,7 +54,8 @@ public class MethodHandles {
                 setSteps();
                 webElement(locator).click();
                 break;
-            }catch (StaleElementReferenceException e){
+            }
+            catch (StaleElementReferenceException e){
 
             }
         }

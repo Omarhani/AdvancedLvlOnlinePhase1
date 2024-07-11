@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.HomePage;
+import pages.LoginPage;
 import reader.ReadDataFromJson;
 import utils.ScreenRecorderUtil;
 import utils.UtilsTests;
@@ -29,6 +30,8 @@ public class BaseTests {
     FirefoxOptions firefoxOptions;
     protected DataModel dataModel;
     protected HomePage homePage;
+
+    protected LoginPage loginpage;
     UtilsTests utilsTests;
 
     @Parameters("browser")
@@ -36,7 +39,7 @@ public class BaseTests {
     public void setUp(String browser) {
         setUpBrowser(browser);
         driver.manage().window().maximize();
-        homePage = new HomePage(driver);
+        homePage = new HomePage();
 
     }
 
