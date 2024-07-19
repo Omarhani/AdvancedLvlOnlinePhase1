@@ -8,7 +8,9 @@ public class TestCasesPage extends MethodHandles {
         super(driver);
     }
 
+
     public String currentURL() {
+
         return driver.getCurrentUrl();
    }
 }
