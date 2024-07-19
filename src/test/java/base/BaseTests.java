@@ -40,7 +40,7 @@ public class BaseTests {
 
     }
 
-    @Parameters("browser")
+    @Parameters("chrome")
     public void setUpBrowser(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();

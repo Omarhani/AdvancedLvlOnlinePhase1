@@ -7,6 +7,7 @@ import pages.TestCasesPage;
 public class TestCasePageTests extends BaseTests {
     @Test
     public void verifyTestCasePage(){
+        homePage.verifyTestCasePage();
         String expectedURL = "https://automationexercise.com/test_cases";
         TestCasesPage testCasesPage = new TestCasesPage(driver);
         Assert.assertEquals(testCasesPage.currentURL(),expectedURL);
