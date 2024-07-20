@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
 
 
 public class BaseTests {
-   public WebDriver driver;
+    WebDriver driver;
 
     ChromeOptions chromeOptions;
 
@@ -33,15 +33,15 @@ public class BaseTests {
 
     @Parameters("browser")
     @BeforeClass
-    public void setUp(String browser) {
+    public void setUp(@Optional("chrome") String browser) {
         setUpBrowser(browser);
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
 
     }
 
-    @Parameters("chrome")
-    public void setUpBrowser(String browser) {
+    @Parameters("browser")
+    public void setUpBrowser(@Optional("chrome") String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("headlessChrome")) {
