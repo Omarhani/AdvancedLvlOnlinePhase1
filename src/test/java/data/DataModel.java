@@ -7,5 +7,9 @@ public class DataModel {
 
     public Login Login;
 
+    public String testCaseURL;
+
+
+
     public Object[][] Login1;
 }
