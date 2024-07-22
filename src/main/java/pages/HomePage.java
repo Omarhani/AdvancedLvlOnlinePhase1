@@ -13,6 +13,8 @@ public class HomePage extends MethodHandles {
     private final By loginLink = By.partialLinkText("Signup / Log");
     private final By deleteAccountLink =By.xpath("//a[contains(text(),'Delete Account')]");
     private final By loggedInAsUsernameText = By.xpath("//a[contains(text(),'Logged in as ')]");
+    private final By contactUsLink = By.xpath("//a[contains(text(),'Contact us')]");
+
 
     public LoginPage clickOnLoginLink(){
         click(loginLink,5);
@@ -28,8 +30,12 @@ public class HomePage extends MethodHandles {
 
     }
 
-    public String homePageTitle() {
-        return driver.getTitle();
-
+//    public String homePageTitle() {
+//        return driver.getTitle();
+//
+//    }
+    public ContactUsForm clickOnContactUsLink(){
+        click(contactUsLink,5);
+        return new ContactUsForm(driver);
     }
 }
