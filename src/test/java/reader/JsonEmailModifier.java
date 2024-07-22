@@ -36,8 +36,6 @@ public class JsonEmailModifier {
         fileWriter.flush();
         fileWriter.close();
 
-        // Debug print
-        System.out.println("Modified email: " + modifiedEmail);
     }
 
 
@@ -45,6 +43,10 @@ public class JsonEmailModifier {
         int atIndex = email.indexOf('@');
         String emailPrefix = email.substring(0, atIndex);
         String emailDomain = email.substring(atIndex);
+
+        // Remove any trailing digits from the email prefix
+        emailPrefix = emailPrefix.replaceAll("\\d+$", "");
+
         return emailPrefix + randomNumber + emailDomain;
     }
 

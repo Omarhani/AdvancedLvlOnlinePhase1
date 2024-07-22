@@ -2,7 +2,7 @@
   "URL": "https://automationexercise.com/",
   "Login": {
     "ValidCredentials": {
-      "Email": "eman7812@gmail.com",
+      "Email": "eman@gmail.com",
       "Password": "123456"
     },
     "InvalidCredentials": {
@@ -18,7 +18,7 @@
   },
   "Register": {
     "Name": "eman",
-    "Email": "eman7812@gmail.com",
+    "Email": "eman@gmail.com",
     "Password": "123456",
     "FirstName": "eman",
     "LastName": "mohamed",
