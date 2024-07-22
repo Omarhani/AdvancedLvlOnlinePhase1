@@ -46,6 +46,10 @@ public class MethodHandles {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(locator));
     }
 
+    public String getPageTitle(){
+        return driver.getTitle();
+    }
+
     protected void click(By locator,int time){
         for (int i = 0;i<5;i++){
             try {
