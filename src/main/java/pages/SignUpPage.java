@@ -18,7 +18,7 @@ public class SignUpPage extends MethodHandles {
     }
 
     public String NewUserSignupValidation() {
-        return driver.findElement(NewUserSignupLabel).getText();
+        return getText(NewUserSignupLabel,5);
     }
 
     public void enterName(String name) {
