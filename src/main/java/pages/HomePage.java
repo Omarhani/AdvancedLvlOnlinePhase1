@@ -26,6 +26,7 @@ public class HomePage extends MethodHandles {
     final static By deleteAccountLink =By.xpath("//a[contains(text(),'Delete Account')]");
     final static By loggedInAsUsernameText = By.xpath("//a[contains(text(),'Logged in as ')]");
 
+
     public LoginPage clickOnLoginLink(){
         click(loginLink,5);
         return new LoginPage(driver);

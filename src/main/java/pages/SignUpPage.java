@@ -33,6 +33,12 @@ public class SignUpPage extends MethodHandles {
         click(SignupBtn,5);
     }
 
+    public void ExistSignUpFuc(String name,String email){
+        enterName(name);
+        enterEmail(email);
+        clickSignupBtn();
+    }
+
     public String ExistSignUpValidation() {
         return driver.findElement(ExistSignUpMessage).getText();
 

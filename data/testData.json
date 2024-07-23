@@ -1,8 +1,20 @@
 {
   "URL": "https://automationexercise.com/",
-  "register": {
-    "name": "ibrahim.mostafa",
-    "email": "ibrahim.mostafa@gmail.com"
+  "Login": {
+    "ValidCredentials": {
+      "Username": "",
+      "Password": ""
+    },
+    "InvalidCredentials": {
+      "InvalidUsername": {
+        "Username": "",
+        "Password": ""
+      }
+    }
   },
-  "ValidationMessage": "Email Address already exist!"
+  "register": {
+    "Name": "ibrahim.mostafa",
+    "Email": "ibrahim.mostafa@gmail.com"
+  },
+  "ExistSignUpValidationMessage": "Email Address already exist!"
 }
