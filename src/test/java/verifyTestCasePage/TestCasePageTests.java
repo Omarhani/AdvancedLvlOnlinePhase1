@@ -8,10 +8,9 @@ public class TestCasePageTests extends BaseTests {
     @Test
     public void verifyTestCasePage(){
         homePage.verifyTestCasePage();
-
+        TestCasesPage TestCasePage = homePage.verifyTestCasePage();
+        String currentURL = TestCasePage.currentURL;
         String expectedURL = dataModel.testCaseURL;
-        TestCasesPage testCasesPage = new TestCasesPage(driver);
-        Assert.assertEquals(testCasesPage.currentURL(),expectedURL);
-
+        Assert.assertEquals(currentURL,expectedURL);
     }
 }

@@ -312,4 +312,9 @@ public class MethodHandles {
         js.executeScript("arguments[0].style.border = '5px solid red'", element);
     }
 
+    public String currentURL() {
+
+        return driver.getCurrentUrl();
+    }
+
 }
