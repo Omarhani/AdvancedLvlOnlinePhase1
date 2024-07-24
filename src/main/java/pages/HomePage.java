@@ -14,19 +14,26 @@ public class HomePage extends MethodHandles {
     private final By Signuplink = By.xpath("//a[contains(text(),'Signup / Login')]");
     private final By SubscribDisplay = By.xpath("//h2[contains(text(),'Subscription')]");
     private final By SubscribeEmail = By.id("susbscribe_email");
-
     private final By SubscribeButton = By.xpath("//button[@id='subscribe']");
     private final By SuccessSubscribeMessage = By.id("success-subscribe");
 
-    public void ScrollToSubscription(){
-        scrollIntoElement(driver,SubscribDisplay);
+    private final By ProductsLink = By.xpath("//a[contains(text(),'Products')]");
+
+    public ProductsPage clickProductsLink() {
+        click(ProductsLink, 5);
+        return new ProductsPage(driver);
+    }
+
+    public void ScrollToSubscription() {
+        scrollIntoElement(driver, SubscribDisplay);
     }
 
     public String VerifySubscribDisplay() {
         return getText(SubscribDisplay, 5);
     }
-    public void EnterSubscribeEmail(String email){
-        sendKeys(SubscribeEmail,5,email);
+
+    public void EnterSubscribeEmail(String email) {
+        sendKeys(SubscribeEmail, 5, email);
     }
 
     public void clickSubscribeButton() {
