@@ -50,4 +50,5 @@ public class LoginTests extends BaseTests {
         loginPage.loginFeature(dataModel.Login.InvalidCredentials.InvalidPassword.Email,dataModel.Login.InvalidCredentials.InvalidPassword.Password);
         Assert.assertTrue(loginPage.validationMSGIsDisplayed());
     }
+
 }

@@ -16,6 +16,7 @@
       }
     }
   },
+
   "Register": {
     "Name": "eman",
     "Email": "eman@gmail.com",
@@ -27,5 +28,7 @@
     "City": "city",
     "zipCode": "123456",
     "mobileNumber": "123456789"
-  }
+  },
+"testCaseURL": "https://automationexercise.com/test_cases"
+
 }
