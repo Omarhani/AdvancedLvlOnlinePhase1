@@ -16,5 +16,6 @@
       }
     }
   },
-  "testCaseURL": "https://automationexercise.com/test_cases"
+  "testCaseURL": "https://automationexercise.com/test_cases",
+  "productName": "tshirt"
 }

@@ -8,6 +8,7 @@ public class DataModel {
     public Login Login;
 
     public String testCaseURL;
+    public String productName;
 
 
 

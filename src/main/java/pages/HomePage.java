@@ -14,6 +14,7 @@ public class HomePage extends MethodHandles {
     private final By deleteAccountLink =By.xpath("//a[contains(text(),'Delete Account')]");
     private final By loggedInAsUsernameText = By.xpath("//a[contains(text(),'Logged in as ')]");
     final static By testCaseButton = By.xpath("//a[contains(text(),'Test Cases')]");
+    final static By productsButton = By.xpath("//a[contains(text(),' Products')]");
 
 
     public LoginPage clickOnLoginLink(){
@@ -35,6 +36,10 @@ public class HomePage extends MethodHandles {
     public TestCasesPage verifyTestCasePage(){
         click(testCaseButton,2);
         return new TestCasesPage(driver);
+    }
+    public productsPage openProductPage(){
+        click(productsButton,2);
+        return new productsPage(driver);
     }
 
 }
