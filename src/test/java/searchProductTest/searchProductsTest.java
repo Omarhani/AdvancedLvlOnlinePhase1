@@ -10,5 +10,6 @@ public class searchProductsTest extends BaseTests {
 
         productsPage productsPage = homePage.openProductPage();
         productsPage.insertProductName(dataModel.ProductName);
+
     }
 }
