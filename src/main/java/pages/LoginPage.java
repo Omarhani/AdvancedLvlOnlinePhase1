@@ -14,7 +14,25 @@ public class LoginPage extends MethodHandles {
     private final By loginButton = By.xpath("//button[contains(text(),'Login')]");
     private final By loginToYourAccountText = By.xpath("//h2[contains(text(),'Login to your account')]");
     private final By validationMSGText = By.xpath("//p[contains(text(),'Your email or password is incorrect!')]");
+    private final By nameField = By.name("name");
+    private final By emailSignUpField = By.xpath("//*[contains(@data-qa , 'signup-email')]");
+    private final By signUpButton = By.xpath("//button[contains(text(),'Signup')]");
 
+    private void insertNameField(String name){
+        sendKeys(nameField,5,name);
+    }
+    private void insertEmailSignUpField(String email){
+        sendKeys(emailSignUpField,5,email);
+    }
+    private void clickOnSignUpButton(){
+        click(signUpButton,5);
+    }
+    public AccountInformationPage signUpFeature(String name,String email){
+        insertNameField(name);
+        insertEmailSignUpField(email);
+        clickOnSignUpButton();
+        return new AccountInformationPage(driver);
+    }
 
     public boolean loginToYourAccountIsDisplayed(){
         return isDisplayed(loginToYourAccountText , 5);
