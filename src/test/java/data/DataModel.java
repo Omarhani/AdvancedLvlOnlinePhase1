@@ -12,4 +12,6 @@ public class DataModel {
 
 
     public Object[][] Login1;
+
+    public Register Register;
 }

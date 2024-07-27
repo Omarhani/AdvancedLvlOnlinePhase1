@@ -13,7 +13,11 @@ public class HomePage extends MethodHandles {
     private final By loginLink = By.partialLinkText("Signup / Log");
     private final By deleteAccountLink =By.xpath("//a[contains(text(),'Delete Account')]");
     private final By loggedInAsUsernameText = By.xpath("//a[contains(text(),'Logged in as ')]");
-    final static By testCaseButton = By.xpath("//a[contains(text(),'Test Cases')]");
+
+    private final By logOutLink =By.xpath("//a[contains(text(),' Logout')]");
+
+    private final  By testCaseButton = By.xpath("//a[contains(text(),'Test Cases')]");
+
 
 
     public LoginPage clickOnLoginLink(){
@@ -24,17 +28,19 @@ public class HomePage extends MethodHandles {
         click(deleteAccountLink , 5);
         return new DeleteAccountPage(driver);
     }
+    public void clickOnLogOutLink(){
+        click(logOutLink , 5);
+    }
+
     public boolean loggedInAsUsernameIsDisplayed(){
         return isDisplayed(loggedInAsUsernameText,5);
 
-    }
-    public String homePageTitle() {
-        return driver.getTitle();
     }
 
     public TestCasesPage verifyTestCasePage(){
         click(testCaseButton,2);
         return new TestCasesPage(driver);
     }
+
 
 }

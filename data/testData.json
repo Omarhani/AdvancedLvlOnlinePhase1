@@ -1,9 +1,9 @@
 {
-  "URL" : "https://automationexercise.com/",
+  "URL": "https://automationexercise.com/",
   "Login": {
     "ValidCredentials": {
       "Email": "eman@gmail.com",
-      "Password": "eman"
+      "Password": "123456"
     },
     "InvalidCredentials": {
       "InvalidEmail": {
@@ -16,5 +16,19 @@
       }
     }
   },
-  "testCaseURL": "https://automationexercise.com/test_cases"
+
+  "Register": {
+    "Name": "eman",
+    "Email": "eman@gmail.com",
+    "Password": "123456",
+    "FirstName": "eman",
+    "LastName": "mohamed",
+    "Address": "address",
+    "State": "state",
+    "City": "city",
+    "zipCode": "123456",
+    "mobileNumber": "123456789"
+  },
+"testCaseURL": "https://automationexercise.com/test_cases"
+
 }

@@ -12,4 +12,6 @@ public class ReadDataFromJson {
         DataModel dataModel = new Gson().fromJson(fileReader, DataModel.class);
         return dataModel;
     }
+
+
 }

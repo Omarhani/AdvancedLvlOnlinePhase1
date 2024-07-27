@@ -11,12 +11,14 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.HomePage;
+import reader.JsonEmailModifier;
 import reader.ReadDataFromJson;
 import utils.ScreenRecorderUtil;
 import utils.UtilsTests;
 
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.reflect.Method;
 
 
@@ -31,13 +33,15 @@ public class BaseTests {
     protected HomePage homePage;
     UtilsTests utilsTests;
 
+
+
     @Parameters("browser")
     @BeforeClass
-    public void setUp(@Optional("chrome") String browser) {
+    public void setUp(@Optional("chrome") String browser) throws IOException {
         setUpBrowser(browser);
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
-
+        JsonEmailModifier.modifyEmailInJson();
     }
 
     @Parameters("browser")
