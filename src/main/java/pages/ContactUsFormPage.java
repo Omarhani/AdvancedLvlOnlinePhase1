@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.MethodHandles;
 
-public class ContactUsForm extends MethodHandles {
-    public ContactUsForm(WebDriver driver) {
+public class ContactUsFormPage extends MethodHandles {
+    public ContactUsFormPage(WebDriver driver) {
         super(driver);
     }
     private final By nameField = By.name("name");
