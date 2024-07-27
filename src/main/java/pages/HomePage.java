@@ -32,8 +32,4 @@ public class HomePage extends MethodHandles {
 
     }
 
-//    public String homePageTitle() {
-//        return driver.getTitle();
-//
-//    }
 }
