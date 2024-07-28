@@ -291,10 +291,10 @@ public class MethodHandles {
     public boolean barNotificationIsDisplayed(){
         return isDisplayed(barNotification,5);
     }
-//    public void scrollIntoElement(WebDriver driver, By locator ) {
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("arguments[0].scrollIntoView(true);",webElement(locator));
-//    }
+    public void scrollIntoElement(WebDriver driver, By locator ) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);",webElement(locator));
+    }
 
     private static String getMethodName() {
         StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
