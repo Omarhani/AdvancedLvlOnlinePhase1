@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TC8,9 XML" >
+    <test name="TC8,9" >
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="productDetails.ProductDetailsTest"/>
+            <class name="searchProductTest.searchProductsTest"></class>
+
+        </classes>
+    </test>
+
+</suite>
