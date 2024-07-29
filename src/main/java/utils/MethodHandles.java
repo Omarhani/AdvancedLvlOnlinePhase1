@@ -46,10 +46,12 @@ public class MethodHandles {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(locator));
     }
 
+
     public String getPageTitle() {
         return driver.getTitle();
 
     }
+
     protected void click(By locator,int time){
         for (int i = 0;i<5;i++){
             try {
@@ -291,10 +293,10 @@ public class MethodHandles {
     public boolean barNotificationIsDisplayed(){
         return isDisplayed(barNotification,5);
     }
-//    public void scrollIntoElement(WebDriver driver, By locator ) {
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("arguments[0].scrollIntoView(true);",webElement(locator));
-//    }
+    public void scrollIntoElement(WebDriver driver, By locator ) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);",webElement(locator));
+    }
 
     private static String getMethodName() {
         StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
@@ -314,6 +316,11 @@ public class MethodHandles {
     private static void addBorderToElement(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].style.border = '5px solid red'", element);
+    }
+
+    public String currentURL() {
+
+        return driver.getCurrentUrl();
     }
 
 }

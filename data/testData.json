@@ -1,9 +1,9 @@
 {
-  "URL" : "https://automationexercise.com/",
+  "URL": "https://automationexercise.com/",
   "Login": {
     "ValidCredentials": {
-      "Email": "eman@gmail.com",
-      "Password": "eman"
+      "Email": "eman8@gmail.com",
+      "Password": "123456"
     },
     "InvalidCredentials": {
       "InvalidEmail": {
@@ -16,13 +16,36 @@
       }
     }
   },
+
   "ContactUS" : {
     "Name": "eman",
     "Email": "eman@gmail.com" ,
     "Subject": "s",
     "Message": "m",
     "attachmentPath": "C:\\Users\\DELL\\IdeaProjects\\AdvancedLvlOnlinePhase1\\Attachments"
+
+  "ExistingRegister": {
+    "Name": "ibrahim.mostafa",
+    "Email": "ibrahim.mostafa@gmail.com"
+  },
+  "ExistSignUpValidationMessage": "Email Address already exist!",
+  "SuccessfullySubscriptionMessage": "You have been successfully subscribed!",
+  "HomePageTitle": "Automation Exercise",
+  "Subscription": "SUBSCRIPTION",
+  "ProductsPageTitle": "All Products",
+  "ProductInformation": "Category: Women > Tops",
+  "ProductName": "tshirt",
+  "Register": {
+    "Name": "eman",
+    "Email": "eman8@gmail.com",
+    "Password": "123456",
+    "FirstName": "eman",
+    "LastName": "mohamed",
+    "Address": "address",
+    "State": "state",
+    "City": "city",
+    "zipCode": "123456",
+    "mobileNumber": "123456789"
+
   }
-
-
 }
