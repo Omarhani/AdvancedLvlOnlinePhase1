@@ -29,6 +29,16 @@ public class HomePage extends MethodHandles {
     private final By SuccessSubscripeMessage = By.id("success-subscribe");
     private final By productsLink = By.xpath("//a[contains(text(),'Products')]");
 
+    private final By viewProductLink = By.linkText("View Product");
+
+    public ProductDetailsPage clickOnViewProductLink(){
+        click(viewProductLink,5);
+        return new ProductDetailsPage(driver);
+    }
+
+    public void clickOnLogOutLink(){
+        click(logOutLink,5);
+    }
 
     public ProductDetailsPage clickOnProductsLink(){
         click(productsLink,5);
@@ -59,6 +69,8 @@ public class HomePage extends MethodHandles {
         return new ExistingSignUpPage(driver);
     }
 
+
+
     public LoginPage clickOnLoginLink() {
         click(loginLink, 5);
         return new LoginPage(driver);
@@ -69,23 +81,9 @@ public class HomePage extends MethodHandles {
         return new DeleteAccountPage(driver);
     }
 
-    public void clickOnLogOutLink() {
-        click(logOutLink, 5);
-    }
+    public boolean loggedInAsUsernameIsDisplayed(){
+        return isDisplayed(loggedInAsUsernameText,5);
 
-    public boolean loggedInAsUsernameIsDisplayed() {
-        return isDisplayed(loggedInAsUsernameText, 5);
-
-    }
-
-
-    public ContactUsForm clickOnContactUsLink(){
-        click(contactUsLink,5);
-        return new ContactUsForm(driver);
-
-    public TestCasesPage verifyTestCasePage() {
-        click(testCaseButton, 2);
-        return new TestCasesPage(driver);
     }
 
     public productsPage openProductPage() {
@@ -93,9 +91,14 @@ public class HomePage extends MethodHandles {
         return new productsPage(driver);
     }
 
-    public String homePageTitle() {
-        return getPageTitle();
+    public TestCasesPage verifyTestCasePage() {
+        click(testCaseButton, 2);
+        return new TestCasesPage(driver);
+    }
 
+    public ContactUsFormPage clickOnContactUsLink(){
+        click(contactUsLink,5);
+        return new ContactUsFormPage(driver);
 
     }
 
