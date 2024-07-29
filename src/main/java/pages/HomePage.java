@@ -13,6 +13,8 @@ public class HomePage extends MethodHandles {
     private final By loginLink = By.partialLinkText("Signup / Log");
     private final By deleteAccountLink = By.xpath("//a[contains(text(),'Delete Account')]");
     private final By loggedInAsUsernameText = By.xpath("//a[contains(text(),'Logged in as ')]");
+    private final By contactUsLink = By.xpath("//a[contains(text(),'Contact us')]");
+
 
     private final By testCaseButton = By.xpath("//a[contains(text(),'Test Cases')]");
     private final By productsButton = By.xpath("//a[contains(text(),' Products')]");
@@ -76,6 +78,11 @@ public class HomePage extends MethodHandles {
 
     }
 
+
+    public ContactUsForm clickOnContactUsLink(){
+        click(contactUsLink,5);
+        return new ContactUsForm(driver);
+
     public TestCasesPage verifyTestCasePage() {
         click(testCaseButton, 2);
         return new TestCasesPage(driver);
@@ -88,6 +95,7 @@ public class HomePage extends MethodHandles {
 
     public String homePageTitle() {
         return getPageTitle();
+
 
     }
 

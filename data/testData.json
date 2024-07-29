@@ -7,7 +7,7 @@
     },
     "InvalidCredentials": {
       "InvalidEmail": {
-        "Email": "e@gmail.com",
+        "Email": "eman@gmail.com",
         "Password": "eman"
       },
       "InvalidPassword": {
@@ -16,6 +16,14 @@
       }
     }
   },
+
+  "ContactUS" : {
+    "Name": "eman",
+    "Email": "eman@gmail.com" ,
+    "Subject": "s",
+    "Message": "m",
+    "attachmentPath": "C:\\Users\\DELL\\IdeaProjects\\AdvancedLvlOnlinePhase1\\Attachments"
+
   "ExistingRegister": {
     "Name": "ibrahim.mostafa",
     "Email": "ibrahim.mostafa@gmail.com"
@@ -38,5 +46,6 @@
     "City": "city",
     "zipCode": "123456",
     "mobileNumber": "123456789"
+
   }
 }

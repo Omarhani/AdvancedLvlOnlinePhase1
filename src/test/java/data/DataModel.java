@@ -21,5 +21,10 @@ public class DataModel {
 
     public Object[][] Login1;
 
+
+    public ContactUS ContactUS ;
+
+
     public Register Register;
+
 }
