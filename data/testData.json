@@ -45,5 +45,12 @@
     "City": "city",
     "zipCode": "123456",
     "mobileNumber": "123456789"
+  },
+  "Payment": {
+    "NameOnCard": "1234",
+    "CardNumber": "name",
+    "CVC": "123",
+    "ExpireMonth": "09",
+    "ExpireYear": "2025"
   }
 }

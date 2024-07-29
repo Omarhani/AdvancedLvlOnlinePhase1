@@ -9,9 +9,20 @@ public class ViewCartPage extends MethodHandles {
         super(driver);
     }
     private final By quantityText = By.cssSelector(".cart_quantity > button");
+    private final By proceedToCheckOutButton =By.xpath("//a[contains(text(),'Proceed To Checkout')]");
+    private final By registerLink =By.xpath("//u[contains(text(),'Register / Login')]");
 
     public String getQuantityText(){
         return getText(quantityText,5);
+    }
+
+    public CheckOutPage clickOnProceedToCheckOutButton(){
+        click(proceedToCheckOutButton,5);
+        return new CheckOutPage(driver);
+    }
+    public LoginPage clickOnRegisterLink(){
+        click(registerLink,5);
+        return new LoginPage(driver);
     }
 
 }
