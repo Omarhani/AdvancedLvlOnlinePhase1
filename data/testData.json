@@ -52,5 +52,9 @@
     "CVC": "123",
     "ExpireMonth": "09",
     "ExpireYear": "2025"
+  },
+    "CartPageTitle": "Automation Exercise - Checkout",
+    "subEmail": "test@test.com",
+    "subMessage": "You have been successfully subscribed!"
   }
 }

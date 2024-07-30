@@ -30,11 +30,11 @@ public class HomePage extends MethodHandles {
     private final By productsLink = By.xpath("//a[contains(text(),'Products')]");
 
     private final By viewProductLink = By.linkText("View Product");
+
     private final By product = By.cssSelector(".single-products");
     private final By addToCartButton = By.cssSelector(".product-overlay > .overlay-content > a");
     private final By viewCardLink = By.xpath("//u[contains(text(),'View Cart')]");
-    private final By cartLink = By.linkText("Cart");
-
+   
     public void clickOnAddToCartButton(){
         hoverOverElement(product,5);
         click(addToCartButton,5);
@@ -49,6 +49,12 @@ public class HomePage extends MethodHandles {
         return new ViewCartPage(driver);
     }
 
+    private final By cartLink = By.xpath("//a[@href='/view_cart' and contains(text(), 'Cart')]");
+
+
+    public String homePageTitle(){
+        return getPageTitle();
+    }
     public ProductDetailsPage clickOnViewProductLink(){
         click(viewProductLink,5);
         return new ProductDetailsPage(driver);
@@ -118,6 +124,10 @@ public class HomePage extends MethodHandles {
         click(contactUsLink,5);
         return new ContactUsFormPage(driver);
 
+    }
+    public cartPage clickOnCartButton(){
+        click(cartLink,1);
+        return new cartPage(driver);
     }
 
 
