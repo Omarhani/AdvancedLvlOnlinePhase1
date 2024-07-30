@@ -45,5 +45,8 @@
     "City": "city",
     "zipCode": "123456",
     "mobileNumber": "123456789"
+  },
+    "CartPageTitle": "Automation Exercise - Checkout",
+    "subEmail": "test@test.com",
+    "subMessage": "You have been successfully subscribed!"
   }
-}

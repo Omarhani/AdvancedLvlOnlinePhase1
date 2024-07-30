@@ -16,6 +16,10 @@ public class DataModel {
     public String ProductInformation;
     public String testCaseURL;
     public String ProductName;
+    public String CartPageTitle;
+    public String subEmail;
+    public String subMessage;
+
 
 
 
