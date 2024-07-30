@@ -46,7 +46,15 @@
     "zipCode": "123456",
     "mobileNumber": "123456789"
   },
+  "Payment": {
+    "NameOnCard": "1234",
+    "CardNumber": "name",
+    "CVC": "123",
+    "ExpireMonth": "09",
+    "ExpireYear": "2025"
+  },
     "CartPageTitle": "Automation Exercise - Checkout",
     "subEmail": "test@test.com",
     "subMessage": "You have been successfully subscribed!"
   }
+}
