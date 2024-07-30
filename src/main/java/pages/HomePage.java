@@ -32,6 +32,9 @@ public class HomePage extends MethodHandles {
     private final By viewProductLink = By.linkText("View Product");
     private final By cartLink = By.xpath("//a[@href='/view_cart' and contains(text(), 'Cart')]");
 
+    public String homePageTitle(){
+        return getPageTitle();
+    }
     public ProductDetailsPage clickOnViewProductLink(){
         click(viewProductLink,5);
         return new ProductDetailsPage(driver);
