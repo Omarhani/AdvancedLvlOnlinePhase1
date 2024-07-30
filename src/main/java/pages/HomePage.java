@@ -30,6 +30,7 @@ public class HomePage extends MethodHandles {
     private final By productsLink = By.xpath("//a[contains(text(),'Products')]");
 
     private final By viewProductLink = By.linkText("View Product");
+    private final By cartLink = By.xpath("//a[@href='/view_cart' and contains(text(), 'Cart')]");
 
     public ProductDetailsPage clickOnViewProductLink(){
         click(viewProductLink,5);
@@ -100,6 +101,10 @@ public class HomePage extends MethodHandles {
         click(contactUsLink,5);
         return new ContactUsFormPage(driver);
 
+    }
+    public cartPage clickOnCartButton(){
+        click(cartLink,1);
+        return new cartPage(driver);
     }
 
 
