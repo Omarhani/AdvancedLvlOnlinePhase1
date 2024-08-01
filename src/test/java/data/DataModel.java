@@ -35,5 +35,6 @@ public class DataModel {
 
 
     public Register Register;
+    public Payment Payment;
 
 }

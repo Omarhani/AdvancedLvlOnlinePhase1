@@ -29,7 +29,27 @@ public class HomePage extends MethodHandles {
     private final By productsLink = By.xpath("//a[contains(text(),'Products')]");
 
     private final By viewProductLink = By.linkText("View Product");
+
+    private final By product = By.cssSelector(".single-products");
+    private final By addToCartButton = By.cssSelector(".product-overlay > .overlay-content > a");
+    private final By viewCardLink = By.xpath("//u[contains(text(),'View Cart')]");
+   
+    public void clickOnAddToCartButton(){
+        hoverOverElement(product,5);
+        click(addToCartButton,5);
+
+    }
+    public ViewCartPage clickOnViewCardLink(){
+        click(viewCardLink,5);
+        return new ViewCartPage(driver);
+    }
+    public ViewCartPage clickOnCartLink(){
+        click(cartLink,5);
+        return new ViewCartPage(driver);
+    }
+
     private final By cartLink = By.xpath("//a[@href='/view_cart' and contains(text(), 'Cart')]");
+
 
     public String homePageTitle(){
         return getPageTitle();
