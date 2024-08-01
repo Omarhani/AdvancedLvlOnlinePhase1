@@ -18,6 +18,9 @@ public class AccountInformationPage extends MethodHandles {
     private final By mobileNumberField = By.id("mobile_number");
     private final By createAccountButton = By.xpath("//button[contains(text(),'Create Account')]");
 
+    private final By accountCreationConfirm = By.xpath("//h2[@data-qa='account-created']/b");
+    private final By createAccountContinueBtn =By.xpath("//a[@data-qa='continue-button']");
+
     private void insertPasswordField(String password){
         sendKeys(passwordField,5,password);
     }
@@ -45,6 +48,12 @@ public class AccountInformationPage extends MethodHandles {
     private void clickOnCreateAccountButton(){
         click(createAccountButton,5);
     }
+    public String accountCreationConfirmMessage(){
+        return getText(accountCreationConfirm,5);
+    }
+    public void clickCreateAccounntContinueBtn(){
+        click(createAccountContinueBtn,5);
+    }
     public void accountInformationFeature(String password ,String firstName, String lastName ,String address ,String state ,String city,String zipcode , String mobileNumber ){
         insertPasswordField(password);
         insertFirstNameField(firstName);
@@ -56,4 +65,6 @@ public class AccountInformationPage extends MethodHandles {
         insertMobileNumberField(mobileNumber);
         clickOnCreateAccountButton();
     }
+
+
 }

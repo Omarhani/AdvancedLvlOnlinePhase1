@@ -13,6 +13,7 @@ public class cartPage extends MethodHandles {
 
     private final By subscribeButton = By.xpath("//*[@id=\"subscribe\"]");
     private final By successSubscribtionMessage = By.xpath("//*[@id=\"success-subscribe\"]/div");
+
     public void insertCartSubEmail(String cartSubMail){
         sendKeys(mailSubscriptionBox,2,cartSubMail);
     }
@@ -20,7 +21,9 @@ public class cartPage extends MethodHandles {
         click(subscribeButton,2);
     }
     public String getSuccessfullySubscribtionMessage(){
-       return getText(successSubscribtionMessage,1);
+       return getText(successSubscribtionMessage,5);
     }
+
+
 
 }

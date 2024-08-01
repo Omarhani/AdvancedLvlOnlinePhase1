@@ -18,7 +18,7 @@ public class ExistingSignUpPage extends MethodHandles {
     }
 
     public String newUserSignupValidation() {
-        return getText(newUserSignupLabel, 5);
+        return getText(newUserSignupLabel,5);
     }
 
     public void enterName(String name) {
@@ -40,7 +40,7 @@ public class ExistingSignUpPage extends MethodHandles {
     }
 
     public String existSignUpValidation() {
-        return getText(existSignUpMessage, 5);
+        return getText(existSignUpMessage,5);
 
     }
 

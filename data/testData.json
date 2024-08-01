@@ -20,6 +20,13 @@
     "Name": "ibrahim.mostafa",
     "Email": "ibrahim.mostafa@gmail.com"
   },
+  "PaymentDetails": {
+    "name_on_card": "ibrahim mostafa",
+    "card_number": "374245455400126",
+    "cvc": "123",
+    "expiry_month": "06",
+    "expiry_year": "2026"
+  },
   "ExistSignUpValidationMessage": "Email Address already exist!",
   "SuccessfullySubscriptionMessage": "You have been successfully subscribed!",
   "HomePageTitle": "Automation Exercise",
@@ -27,6 +34,10 @@
   "ProductsPageTitle": "All Products",
   "ProductInformation": "Category: Women \u003e Tops",
   "ProductName": "tshirt",
+  "accountCreationConfirm": "ACCOUNT CREATED!",
+  "orderComment": "order comment added by ibrahim moustafa",
+  "DeliveryAddressPanel": "YOUR DELIVERY ADDRESS",
+  "PaymentSuccessMessage": "Your order has been placed successfully!",
   "ContactUS": {
     "Name": "eman",
     "Email": "eman@gmail.com",
@@ -46,7 +57,7 @@
     "zipCode": "123456",
     "mobileNumber": "123456789"
   },
-    "CartPageTitle": "Automation Exercise - Checkout",
-    "subEmail": "test@test.com",
-    "subMessage": "You have been successfully subscribed!"
-  }
+  "CartPageTitle": "Automation Exercise - Checkout",
+  "subEmail": "test@test.com",
+  "subMessage": "You have been successfully subscribed!"
+}
