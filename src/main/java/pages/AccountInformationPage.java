@@ -54,7 +54,7 @@ public class AccountInformationPage extends MethodHandles {
     public void clickCreateAccounntContinueBtn(){
         click(createAccountContinueBtn,5);
     }
-    public void accountInformationFeature(String password ,String firstName, String lastName ,String address ,String state ,String city,String zipcode , String mobileNumber ){
+    public AccountCreatedPage accountInformationFeature(String password ,String firstName, String lastName ,String address ,String state ,String city,String zipcode , String mobileNumber ){
         insertPasswordField(password);
         insertFirstNameField(firstName);
         insertLastNameField(lastName);
@@ -64,6 +64,7 @@ public class AccountInformationPage extends MethodHandles {
         insertZipcodeField(zipcode);
         insertMobileNumberField(mobileNumber);
         clickOnCreateAccountButton();
+        return new AccountCreatedPage(driver);
     }
 
 

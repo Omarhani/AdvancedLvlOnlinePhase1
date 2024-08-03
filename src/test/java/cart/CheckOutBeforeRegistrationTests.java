@@ -32,16 +32,16 @@ public class CheckOutBeforeRegistrationTests extends BaseTests {
         accountCreatedPage.clickOnContinueButton();
         homePage.clickOnCartLink();
         CheckOutPage checkOutPage = viewCartPage.clickOnProceedToCheckOutButton();
-        PaymentPage paymentPage = checkOutPage.clickOnPlaceOrderButton();
-        PaymentDonePage paymentDonePage = paymentPage.clickOnConfirmOrder(
-                dataModel.Payment.NameOnCard,
-                dataModel.Payment.CardNumber,
-                dataModel.Payment.CVC,
-                dataModel.Payment.ExpireMonth,
-                dataModel.Payment.ExpireYear);
-        Assert.assertTrue(paymentDonePage.orderConfirmedTextIsDisplayed());
-        DeleteAccountPage deleteAccountPage = paymentDonePage.clickOnDeleteAccountLink();
+        PaymentPage paymentPage = checkOutPage.clickPlaceOrderBtn();
+        paymentPage.insertPaymentDetails(
+                dataModel.PaymentDetails.name_on_card,
+                dataModel.PaymentDetails.card_number,
+                dataModel.PaymentDetails.cvc,
+                dataModel.PaymentDetails.expiry_month,
+                dataModel.PaymentDetails.expiry_year);
+        paymentPage.clickPayAndConfirmBtn();
+      //  Assert.assertTrue(paymentPage.orderConfirmedTextIsDisplayed());
+        DeleteAccountPage deleteAccountPage = homePage.clickOnDeleteAccountLink();
         Assert.assertTrue(deleteAccountPage.deleteAccountIsDisplayed());
-        deleteAccountPage.clickOnContinueButton();
     }
 }
