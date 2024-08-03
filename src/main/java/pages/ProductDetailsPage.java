@@ -26,7 +26,7 @@ public class ProductDetailsPage extends MethodHandles {
     }
 
     public String verifyProductInformationDisplay() {
-        return getText(VerifyProductInformation, 5);
+        return getText(VerifyProductInformation,5);
     }
 
     public void insertQuantityField(String quantity){

@@ -15,7 +15,6 @@ public class HomePage extends MethodHandles {
     private final By loggedInAsUsernameText = By.xpath("//a[contains(text(),'Logged in as ')]");
     private final By contactUsLink = By.xpath("//a[contains(text(),'Contact us')]");
 
-
     private final By testCaseButton = By.xpath("//a[contains(text(),'Test Cases')]");
     private final By productsButton = By.xpath("//a[contains(text(),' Products')]");
 
@@ -30,11 +29,11 @@ public class HomePage extends MethodHandles {
     private final By productsLink = By.xpath("//a[contains(text(),'Products')]");
 
     private final By viewProductLink = By.linkText("View Product");
+
     private final By product = By.cssSelector(".single-products");
     private final By addToCartButton = By.cssSelector(".product-overlay > .overlay-content > a");
     private final By viewCardLink = By.xpath("//u[contains(text(),'View Cart')]");
-    private final By cartLink = By.linkText("Cart");
-
+   
     public void clickOnAddToCartButton(){
         hoverOverElement(product,5);
         click(addToCartButton,5);
@@ -49,6 +48,12 @@ public class HomePage extends MethodHandles {
         return new ViewCartPage(driver);
     }
 
+    private final By cartLink = By.xpath("//a[@href='/view_cart' and contains(text(), 'Cart')]");
+
+
+    public String homePageTitle(){
+        return getPageTitle();
+    }
     public ProductDetailsPage clickOnViewProductLink(){
         click(viewProductLink,5);
         return new ProductDetailsPage(driver);
@@ -67,7 +72,7 @@ public class HomePage extends MethodHandles {
     }
 
     public String VerifySubscribDisplay() {
-        return getText(subscribDisplay, 5);
+        return getText(subscribDisplay,5);
     }
 
     public void EnterSubscribeEmail(String email) {
@@ -79,7 +84,7 @@ public class HomePage extends MethodHandles {
     }
 
     public String verifySuccessSubscripeMessage() {
-        return getText(SuccessSubscripeMessage, 5);
+        return getText(SuccessSubscripeMessage,5);
     }
 
     public ExistingSignUpPage clickSignUpLink() {
@@ -118,6 +123,10 @@ public class HomePage extends MethodHandles {
         click(contactUsLink,5);
         return new ContactUsFormPage(driver);
 
+    }
+    public cartPage clickOnCartButton(){
+        click(cartLink,1);
+        return new cartPage(driver);
     }
 
 
