@@ -15,7 +15,7 @@ public class LoginTests extends BaseTests {
     @Test
     public void testLoginSuccessfully(){
         Random rand = new Random();
-        int randomNumber = rand.nextInt(100);
+        int randomNumber = rand.nextInt(100000);
         LoginPage loginPage = homePage.clickOnLoginLink();
         AccountInformationPage accountInformationPage = loginPage.signUpFeature(
                 dataModel.Register.Name ,
