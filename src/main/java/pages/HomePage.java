@@ -15,7 +15,6 @@ public class HomePage extends MethodHandles {
     private final By loggedInAsUsernameText = By.xpath("//a[contains(text(),'Logged in as ')]");
     private final By contactUsLink = By.xpath("//a[contains(text(),'Contact us')]");
 
-
     private final By testCaseButton = By.xpath("//a[contains(text(),'Test Cases')]");
     private final By productsButton = By.xpath("//a[contains(text(),' Products')]");
 
@@ -73,7 +72,7 @@ public class HomePage extends MethodHandles {
     }
 
     public String VerifySubscribDisplay() {
-        return getText(subscribDisplay, 5);
+        return getText(subscribDisplay,5);
     }
 
     public void EnterSubscribeEmail(String email) {
@@ -85,7 +84,7 @@ public class HomePage extends MethodHandles {
     }
 
     public String verifySuccessSubscripeMessage() {
-        return getText(SuccessSubscripeMessage, 5);
+        return getText(SuccessSubscripeMessage,5);
     }
 
     public ExistingSignUpPage clickSignUpLink() {

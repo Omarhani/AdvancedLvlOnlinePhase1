@@ -2,49 +2,58 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.MethodHandles;
-
-import java.time.Duration;
 
 public class PaymentPage extends MethodHandles {
     public PaymentPage(WebDriver driver) {
         super(driver);
     }
-    private final By nameOnCardField = By.name("name_on_card");
-    private final By cardNumberField = By.name("card_number");
-    private final By cvcField = By.name("cvc");
-    private final By expiryMonthField = By.name("expiry_month");
-    private final By expiryYearField = By.name("expiry_year");
-    private final By confirmOrderButton = By.id("submit");
-    private final By placeOrderSuccessfulText =By.xpath("//div[contains(text(),'Your order has been placed successfully!')]");
 
-    private void insertNameOnCardField(String nameOnCard){
-        sendKeys(nameOnCardField,5,nameOnCard);
+    private final By name_on_card = By.name("name_on_card");
+    private final By card_number = By.name("card_number");
+
+    private final By cvc = By.xpath("//input[@name='cvc']");
+
+    private final By expiry_month = By.name("expiry_month");
+
+    private final By expiry_year = By.name("expiry_year");
+    private final By payAndConfirmBtn = By.xpath("//button[@id='submit']");
+
+    private final By paymentSuccessMessage = By.xpath("//div[@id='success_message']/div");
+
+    public void insert_name_on_card(String txt) {
+        sendKeys(name_on_card, 5, txt);
     }
-    private void insertCardNumberFieldField(String cardNumber){
-        sendKeys(cardNumberField,5,cardNumber);
+
+    public void insert_card_number(String txt) {
+        sendKeys(card_number, 5, txt);
     }
-    private void insertCvcField(String cvc){
-        sendKeys(cvcField,5,cvc);
+
+    public void insert_cvc(String txt) {
+        sendKeys(cvc, 5, txt);
     }
-    private void insertExpiryMonthField(String expiryMonth){
-        sendKeys(expiryMonthField,5,expiryMonth);
+
+    public void insert_expiry_month(String txt) {
+        sendKeys(expiry_month, 5, txt);
     }
-    private void insertExpiryYearField(String expiryYear){
-        sendKeys(expiryYearField,5,expiryYear);
+
+    public void insert_expiry_year(String txt) {
+        sendKeys(expiry_year, 5, txt);
     }
-    public String getPlaceOrderSuccessfulText(){
-        return getText(placeOrderSuccessfulText,5);
+
+    public void insertPaymentDetails(String nameOnCard, String cardNumber, String cvc, String expiryMonth, String expiryYear) {
+        insert_card_number(nameOnCard);
+        insert_name_on_card(cardNumber);
+        insert_cvc(cvc);
+        insert_expiry_month(expiryMonth);
+        insert_expiry_year(expiryYear);
     }
-    public PaymentDonePage clickOnConfirmOrder(String nameOnCard ,String cardNumber,String cvc,String expiryMonth,String expiryYear){
-        insertNameOnCardField(nameOnCard);
-        insertCardNumberFieldField(cardNumber);
-        insertCvcField(cvc);
-        insertExpiryMonthField(expiryMonth);
-        insertExpiryYearField(expiryYear);
-        click(confirmOrderButton,5);
-        return new PaymentDonePage(driver);
+
+    public void clickPayAndConfirmBtn() {
+        click(payAndConfirmBtn, 5);
+    }
+
+    public String payementSuccessConfirmMessage() {
+        return getText(paymentSuccessMessage,5);
     }
 }

@@ -12,6 +12,12 @@ public class ViewCartPage extends MethodHandles {
     private final By proceedToCheckOutButton =By.xpath("//a[contains(text(),'Proceed To Checkout')]");
     private final By registerLink =By.xpath("//u[contains(text(),'Register / Login')]");
 
+    private final By proceedToCheckOutBtn = By.xpath("//a[@class='btn btn-default check_out']");
+    public CheckOutPage clickProceedToCheckOutBtn(){
+        click(proceedToCheckOutBtn,5);
+        return new CheckOutPage(driver);
+    }
+
     public String getQuantityText(){
         return getText(quantityText,5);
     }
