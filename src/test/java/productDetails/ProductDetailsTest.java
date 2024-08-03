@@ -10,7 +10,7 @@ public class ProductDetailsTest extends BaseTests {
     @Test
     public void ProductsInformationTest() {
 
-        Assert.assertTrue(homePage.homePageTitle().contains(dataModel.HomePageTitle));
+        Assert.assertTrue(homePage.getPageTitle().contains(dataModel.HomePageTitle));
         ProductDetailsPage productDetailsPage = homePage.clickOnProductsLink();
         Assert.assertTrue(productDetailsPage.getAllProductPageTitle().contains(dataModel.ProductsPageTitle));
         productDetailsPage.clickFirstProductsLink();
